@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank Yadav | Mechanical Engineering & Automotive Portfolio</title>
+    <meta name="description" content="Portfolio of Mayank Yadav - 1st Year B.Tech Mechanical Engineering student passionate about car repair, automotive fabrication, precision firearms mechanics, and hands-on engineering.">
+    <meta name="keywords" content="Mayank Yadav, Mechanical Engineer, Automotive Engineering, Car Repair, Firearms Mechanism, CAD, Narnaul, Yaduvanshi Shiksha Niketan">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="blueprint-theme">
+    <!-- Background Canvas for Interactive Mechanical Grid -->
+    <canvas id="mechanicsCanvas"></canvas>
+    
+    <!-- Subtle Blueprint Grid Overlay -->
+    <div class="blueprint-grid-overlay"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-icon"><i class="fa-solid fa-gear fa-spin-pulse"></i></span>
+                <span class="logo-text">MAYANK<span class="accent-dot">.</span>ENG</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Overview</a>
+                <a href="#about" class="nav-link"><i class="fa-solid fa-user-astronaut"></i> About</a>
+                <a href="#interests" class="nav-link"><i class="fa-solid fa-fire-flame-curved"></i> Passions</a>
+                <a href="#projects" class="nav-link"><i class="fa-solid fa-cubes-stacked"></i> Projects</a>
+                <a href="#skills" class="nav-link"><i class="fa-solid fa-screwdriver-wrench"></i> Skills</a>
+                <a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+                <a href="#contact" class="nav-link cta-link"><i class="fa-solid fa-paper-plane"></i> Connect</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-outline btn-sm hire-btn">
+                    <i class="fa-solid fa-envelope-open-text"></i> Let's Talk
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <span class="ping-circle"></span>
+                        <span class="status-text">First-Year B.Tech Mechanical Student • Hands-on Maker</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Mayank Yadav</span>
+                    </h1>
+
+                    <h2 class="hero-subtitle">
+                        Driven by <span class="typewriter" id="typewriterText"></span><span class="cursor">|</span>
+                    </h2>
+
+                    <p class="hero-desc">
+                        Aspiring mechanical engineer with a raw obsession for dismantling, understanding, and engineering high-performance machines. From teardown diagnostics and fabricating automotive systems to studying precision ballistics and kinematic mechanisms, I believe the best engineering happens with grease on your hands and curiosity in your mind.
+                    </p>
+
+                    <div class="hero-stats-grid">
+                        <div class="hero-stat-card">
+                            <div class="stat-number">B.Tech</div>
+                            <div class="stat-label">Mechanical Engg (1st Year)</div>
+                        </div>
+                        <div class="hero-stat-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Practical & Maker Focus</div>
+                        </div>
+                        <div class="hero-stat-card">
+                            <div class="stat-number">Narnaul</div>
+                            <div class="stat-label">Haryana, India</div>
+                        </div>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-compass"></i> Explore My Builds
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fa-solid fa-wrench"></i> Collaborate & Talk Shop
+                        </a>
+                        <a href="#skills" class="btn btn-ghost">
+                            <i class="fa-solid fa-microchip"></i> Technical Stack
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="schematic-card">
+                        <div class="schematic-header">
+                            <div class="schematic-indicator">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="schematic-title">CORE_SYS // SPEC_SHEET_V1.0</div>
+                        </div>
+                        <div class="schematic-display">
+                            <div class="blueprint-circle">
+                                <div class="rotating-ring outer"></div>
+                                <div class="rotating-ring inner"></div>
+                                <div class="center-icon">
+                                    <i class="fa-solid fa-car-burst"></i>
+                                </div>
+                            </div>
+
+                            <div class="spec-list">
+                                <div class="spec-row">
+                                    <span class="spec-key"><i class="fa-solid fa-user"></i> Name</span>
+                                    <span class="spec-val">Mayank Yadav</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-key"><i class="fa-solid fa-graduation-cap"></i> Stream</span>
+                                    <span class="spec-val">Mechanical Engineering (B.Tech)</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-key"><i class="fa-solid fa-car"></i> Domain 01</span>
+                                    <span class="spec-val highlight-orange">Automotive Tech & Engine Repair</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-key"><i class="fa-solid fa-crosshairs"></i> Domain 02</span>
+                                    <span class="spec-val highlight-cyan">Firearms Kinematics & Ballistics</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-key"><i class="fa-solid fa-map-pin"></i> Hometown</span>
+                                    <span class="spec-val">Narnaul, Haryana</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-key"><i class="fa-solid fa-bolt"></i> Philosophy</span>
+                                    <span class="spec-val text-green">Learn • Tear Down • Build Better</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="schematic-footer">
+                            <span><i class="fa-solid fa-terminal"></i> READY FOR WORKSHOP & DESIGN CHALLENGES</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-tag"><i class="fa-solid fa-id-card"></i> THE BACKSTORY</div>
+                <h2 class="section-title">Who is <span class="gradient-text">Mayank Yadav</span>?</h2>
+                <p class="section-subtitle">
+                    A curious mind rooted in Haryana with an unquenchable thirst for mechanical machines, engines, and physical engineering.
+                </p>
+
+                <div class="about-grid">
+                    <div class="about-text-card">
+                        <h3><i class="fa-solid fa-quote-left accent-icon"></i> From Curiosity to Engineering</h3>
+                        <p>
+                            I completed my Class 12th from <strong>Yaduvanshi Shiksha Niketan, Narnaul (Haryana)</strong>. Ever since I can remember, I wasn't just interested in using devices—I had to open them up, understand every screw, linkage, pressure drop, and combustion stroke.
+                        </p>
+                        <p>
+                            Now stepping into my <strong>first year of B.Tech Mechanical Engineering</strong>, I am taking that lifelong passion for nuts and bolts into rigorous academic and practical heights. While many rely only on computer simulations, I believe true mechanical engineering demands getting your hands dirty in the workshop, listening to an engine run, and feeling the tolerances of precision-machined steel.
+                        </p>
+                        <p>
+                            I am constantly learning new domains—from advanced CAD drafting and welding concepts to internal combustion kinematics, thermodynamics, and high-tolerance firearms mechanisms.
+                        </p>
+
+                        <div class="quote-box">
+                            <p>"If it moves, produces power, or uses mechanical mechanical advantage, I want to master how it's built."</p>
+                        </div>
+                    </div>
+
+                    <div class="about-pillars">
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fa-solid fa-wrench"></i></div>
+                            <div>
+                                <h4>Hands-on Tinkerer</h4>
+                                <p>Unintimidated by complex assemblies. Enthusiastic about repairing car engines, diagnosing mechanical failures, and turning wrenches.</p>
+                            </div>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fa-solid fa-bullseye"></i></div>
+                            <div>
+                                <h4>Precision & Ballistics Fascination</h4>
+                                <p>Fascinated by high-speed kinetic mechanisms, firearm cycle-of-operation, gas blowback dynamics, and metallurgical heat treatments.</p>
+                            </div>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                            <div>
+                                <h4>Relentless Learner</h4>
+                                <p>Always exploring new horizons: 3D CAD modeling, automotive fabrication, EV conversion basics, and workshop machining operations.</p>
+                            </div>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div>
+                                <h4>Strong Foundation</h4>
+                                <p>Grounded in solid science and mathematics from Yaduvanshi Shiksha Niketan, now channeled into B.Tech core engineering.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Passions & Engineering Areas -->
+        <section id="interests" class="section interests-section">
+            <div class="container">
+                <div class="section-tag"><i class="fa-solid fa-compass-drafting"></i> CORE SPECIALTIES</div>
+                <h2 class="section-title">What Drives My <span class="gradient-text">Engineering Pulse</span></h2>
+                <p class="section-subtitle">
+                    The two primary mechanical domains where my passion, study, and future ambitions intersect.
+                </p>
+
+                <div class="interests-grid">
+                    <!-- Interest 1: Automotive -->
+                    <div class="interest-card automotive-card">
+                        <div class="interest-badge"><i class="fa-solid fa-car-side"></i> AUTOMOTIVE & ENGINES</div>
+                        <div class="card-visual-header">
+                            <i class="fa-solid fa-oil-can visual-symbol"></i>
+                        </div>
+                        <h3>Automotive Engineering, Diagnostics & Custom Fabrication</h3>
+                        <p>
+                            Cars are the ultimate symphony of mechanical engineering—combining fluid dynamics, thermal cycles, electrical control, and chassis mechanics into one living machine.
+                        </p>
+                        <ul class="interest-features">
+                            <li><i class="fa-solid fa-check-circle"></i> <strong>Engine Diagnostics & Teardown:</strong> Studying 4-stroke cycles, valve timings, piston assemblies, and spark/fuel distribution.</li>
+                            <li><i class="fa-solid fa-check-circle"></i> <strong>Powertrain & Transmission:</strong> Manual gearboxes, differentials, clutch assemblies, and torque delivery.</li>
+                            <li><i class="fa-solid fa-check-circle"></i> <strong>Chassis & Suspension Dynamics:</strong> Double wishbone, MacPherson struts, anti-roll geometry, and structural rigidity.</li>
+                            <li><i class="fa-solid fa-check-circle"></i> <strong>Car Repair & Restoration:</strong> Practical troubleshooting of brake systems, cooling radiators, alternators, and steering linkages.</li>
+                            <li><i class="fa-solid fa-check-circle"></i> <strong>Future Ambition:</strong> Building custom project cars, go-karts, and exploring lightweight hybrid powertrains.</li>
+                        </ul>
+                        <div class="interest-footer-tag">#InternalCombustion #ChassisDynamics #Fabrication #AutomotiveRepair</div>
+                    </div>
+
+                    <!-- Interest 2: Precision Firearms & Ballistics -->
+                    <div class="interest-card firearms-card">
+                        <div class="interest-badge"><i class="fa-solid fa-crosshairs"></i> PRECISION MECHANISMS</div>
+                        <div class="card-visual-header">
+                            <i class="fa-solid fa-shield-cat visual-symbol"></i>
+                        </div>
+                        <h3>Firearms Mechanics, Ballistics & Defense Technology</h3>
+                        <p>
+                            Firearms represent some of the most rigorous tolerances, extreme pressures, and instantaneous kinetic energy transfers in mechanical engineering.
+                        </p>
+                        <ul class="interest-features">
+                            <li><i class="fa-solid fa-check-circle"></i> <strong>Kinematic Cycle of Operation:</strong> Feeding, chambering, locking, firing, unlocking, extracting, ejecting, and cocking.</li>
+                            <li><i class="fa-solid fa-check-circle"></i> <strong>Operating Systems:</strong> Direct impingement, short-stroke & long-stroke gas pistons, roller-delayed blowback.</li>
+                            <li><i class="fa-solid fa-check-circle"></i> <strong>Internal & External Ballistics:</strong> Chamber pressure curves, rifling twist rates, projectile aerodynamics, and recoil mitigation.</li>
+                            <li><i class="fa-solid fa-check-circle"></i> <strong>High-Tolerance Metallurgy:</strong> High-tensile steel grades, chrome-moly barrels, nitriding, heat treatments, and CNC tolerances.</li>
+                            <li><i class="fa-solid fa-check-circle"></i> <strong>Engineering Respect:</strong> Studied strictly from mechanical science, design ingenuity, and defensive engineering perspectives.</li>
+                        </ul>
+                        <div class="interest-footer-tag">#PrecisionMachining #GasSystems #Kinematics #Metallurgy</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects / Technical Exploration Showcase -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-tag"><i class="fa-solid fa-cubes"></i> WORK IN PROGRESS & CONCEPTS</div>
+                <h2 class="section-title">Projects & <span class="gradient-text">Practical Explorations</span></h2>
+                <p class="section-subtitle">
+                    Hands-on breakdowns, mechanical study models, and engineering concepts I am actively working on during my B.Tech journey.
+                </p>
+
+                <!-- Filter Controls -->
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All Explorations</button>
+                    <button class="filter-btn" data-filter="auto">Automotive</button>
+                    <button class="filter-btn" data-filter="precision">Precision & Mechanisms</button>
+                    <button class="filter-btn" data-filter="cad">CAD & Design</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-category="auto">
+                        <div class="project-header">
+                            <span class="project-tag automotive"><i class="fa-solid fa-car"></i> Automotive</span>
+                            <span class="project-date">2025 - Ongoing</span>
+                        </div>
+                        <h3 class="project-title">IC Engine Complete Teardown & Diagnostic Mapping</h3>
+                        <p class="project-desc">
+                            A systematic analysis of single and multi-cylinder internal combustion engines. Inspecting cylinder wall clearances, piston ring wear, valve seating, and ignition timing optimization.
+                        </p>
+                        <div class="project-specs">
+                            <span><i class="fa-solid fa-gear"></i> 4-Stroke Cycle</span>
+                            <span><i class="fa-solid fa-gauge-high"></i> Compression Testing</span>
+                            <span><i class="fa-solid fa-screwdriver"></i> Hand Tool Workshop</span>
+                        </div>
+                        <button class="btn-text open-modal-btn" data-project="p1">
+                            Inspect Engineering Details <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-category="precision">
+                        <div class="project-header">
+                            <span class="project-tag precision"><i class="fa-solid fa-crosshairs"></i> Precision Mechanics</span>
+                            <span class="project-date">2025</span>
+                        </div>
+                        <h3 class="project-title">Kinematic Study of Rotating Bolt & Gas Operating Systems</h3>
+                        <p class="project-desc">
+                            Mechanical investigation into rotating bolt lockup and gas-piston actuation under high chamber pressures. Evaluating cam pin geometry, bolt carrier velocity, and spring energy absorption.
+                        </p>
+                        <div class="project-specs">
+                            <span><i class="fa-solid fa-atom"></i> Kinematic Analysis</span>
+                            <span><i class="fa-solid fa-fire"></i> Gas Dynamics</span>
+                            <span><i class="fa-solid fa-shield"></i> Locking Lugs</span>
+                        </div>
+                        <button class="btn-text open-modal-btn" data-project="p2">
+                            Inspect Engineering Details <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-category="auto">
+                        <div class="project-header">
+                            <span class="project-tag automotive"><i class="fa-solid fa-car"></i> Automotive</span>
+                            <span class="project-date">Concept Design</span>
+                        </div>
+                        <h3 class="project-title">Tubular Spaceframe Go-Kart / Buggy Chassis Design</h3>
+                        <p class="project-desc">
+                            Designing a lightweight tubular spaceframe chassis using triangulated mild steel DOM tubing. Formulating suspension roll center, Ackerman steering angle, and driver ergonomic safety.
+                        </p>
+                        <div class="project-specs">
+                            <span><i class="fa-solid fa-bezier-curve"></i> Roll Cage Rigidity</span>
+                            <span><i class="fa-solid fa-route"></i> Ackerman Steering</span>
+                            <span><i class="fa-solid fa-weight-hanging"></i> Low CG Balance</span>
+                        </div>
+                        <button class="btn-text open-modal-btn" data-project="p3">
+                            Inspect Engineering Details <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card" data-category="cad">
+                        <div class="project-header">
+                            <span class="project-tag cad"><i class="fa-solid fa-compass-drafting"></i> CAD Modeling</span>
+                            <span class="project-date">Academic Study</span>
+                        </div>
+                        <h3 class="project-title">3D CAD Modeling of Mechanical Gearboxes & Differential</h3>
+                        <p class="project-desc">
+                            Computer-aided drafting of planetary gears, bevel gear differentials, and splined shafts. Parametric tooth profile generation (involute curve) and assembly clearance verifications.
+                        </p>
+                        <div class="project-specs">
+                            <span><i class="fa-solid fa-cubes"></i> 3D Solid Modeling</span>
+                            <span><i class="fa-solid fa-arrows-spin"></i> Bevel Differentials</span>
+                            <span><i class="fa-solid fa-chart-line"></i> Gear Ratio Calculations</span>
+                        </div>
+                        <button class="btn-text open-modal-btn" data-project="p4">
+                            Inspect Engineering Details <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card" data-category="auto">
+                        <div class="project-header">
+                            <span class="project-tag automotive"><i class="fa-solid fa-wrench"></i> Practical Repair</span>
+                            <span class="project-date">Continuous</span>
+                        </div>
+                        <h3 class="project-title">Vehicle Maintenance & DIY Brake / Suspension Overhauls</h3>
+                        <p class="project-desc">
+                            Hands-on experience bleeding hydraulic brake lines, replacing disc brake calipers, strut assembly replacements, spark plug gaps check, and cooling fluid flushes.
+                        </p>
+                        <div class="project-specs">
+                            <span><i class="fa-solid fa-droplet"></i> Hydraulic Bleeding</span>
+                            <span><i class="fa-solid fa-car"></i> Suspension Dampers</span>
+                            <span><i class="fa-solid fa-oil-well"></i> Fluid System Care</span>
+                        </div>
+                        <button class="btn-text open-modal-btn" data-project="p5">
+                            Inspect Engineering Details <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card" data-category="precision">
+                        <div class="project-header">
+                            <span class="project-tag precision"><i class="fa-solid fa-microscope"></i> Workshop Tech</span>
+                            <span class="project-date">2025</span>
+                        </div>
+                        <h3 class="project-title">Machining Tolerances & Surface Finish Comparative Study</h3>
+                        <p class="project-desc">
+                            Exploring ISO tolerance grades (H7/g6 fits), lathe facing, cylindrical turning, and how surface roughness impacts friction, heat accumulation, and mechanical longevity.
+                        </p>
+                        <div class="project-specs">
+                            <span><i class="fa-solid fa-ruler-combined"></i> Vernier & Micrometer</span>
+                            <span><i class="fa-solid fa-industry"></i> Lathe Turning</span>
+                            <span><i class="fa-solid fa-temperature-arrow-up"></i> Thermal Expansion</span>
+                        </div>
+                        <button class="btn-text open-modal-btn" data-project="p6">
+                            Inspect Engineering Details <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Engineering Arsenal -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-tag"><i class="fa-solid fa-microchip"></i> TOOLKIT & COMPETENCIES</div>
+                <h2 class="section-title">Technical <span class="gradient-text">Engineering Arsenal</span></h2>
+                <p class="section-subtitle">
+                    The blend of academic engineering principles, CAD software, and physical workshop proficiency.
+                </p>
+
+                <div class="skills-grid">
+                    <!-- Category 1: Mechanical & Automotive Core -->
+                    <div class="skill-category-card">
+                        <div class="cat-header">
+                            <i class="fa-solid fa-car-battery cat-icon"></i>
+                            <h3>Automotive & Thermal</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>IC Engine Mechanics & Diagnostics</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Transmission & Drivetrain Concepts</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Chassis & Suspension Geometries</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 70%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Thermodynamics Fundamentals</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Precision Mechanics & Firearms Study -->
+                    <div class="skill-category-card">
+                        <div class="cat-header">
+                            <i class="fa-solid fa-crosshairs cat-icon"></i>
+                            <h3>Precision & Ballistics</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Mechanism Kinematics (Blowback/Gas)</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Tolerancing & Clearance Fits (ISO)</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Internal & External Ballistics Physics</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 70%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Metallurgy & Heat Treatment Basics</span>
+                                    <span>65%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 65%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Design & Software Tools -->
+                    <div class="skill-category-card">
+                        <div class="cat-header">
+                            <i class="fa-solid fa-laptop-code cat-icon"></i>
+                            <h3>Design & Digital Tools</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>AutoCAD / 2D Drafting</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>SolidWorks / Fusion 360 (Modeling)</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 70%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Engineering Drawing & Projection</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Applied Physics & Calculus</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: Workshop & Fabrication -->
+                    <div class="skill-category-card">
+                        <div class="cat-header">
+                            <i class="fa-solid fa-hammer cat-icon"></i>
+                            <h3>Workshop & Fabrication</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Lathe & Bench Machine Operations</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 70%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Precision Measurement (Micrometer)</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Automotive Hand Tools & Torque Wrenches</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 95%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Safety Standards & Workshop Protocol</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Engineering Mindset Badges -->
+                <div class="mindset-section">
+                    <h3 class="mindset-title"><i class="fa-solid fa-lightbulb"></i> Maker Principles</h3>
+                    <div class="badge-wrap">
+                        <span class="m-badge"><i class="fa-solid fa-check"></i> Always Ready to Learn</span>
+                        <span class="m-badge"><i class="fa-solid fa-check"></i> Root Cause Diagnostics</span>
+                        <span class="m-badge"><i class="fa-solid fa-check"></i> Physical Machine Testing</span>
+                        <span class="m-badge"><i class="fa-solid fa-check"></i> Cross-Disciplinary Exploration</span>
+                        <span class="m-badge"><i class="fa-solid fa-check"></i> Obsession with Precision</span>
+                        <span class="m-badge"><i class="fa-solid fa-check"></i> Safety & Protocol First</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Academic Journey -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <div class="section-tag"><i class="fa-solid fa-graduation-cap"></i> ACADEMIC ROADMAP</div>
+                <h2 class="section-title">Education & <span class="gradient-text">Milestones</span></h2>
+                <p class="section-subtitle">
+                    The solid foundation enabling my journey from high school in Narnaul to university-level mechanical engineering.
+                </p>
+
+                <div class="timeline">
+                    <!-- Milestone 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot current"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="badge-year">2025 - Present (1st Year)</span>
+                                <span class="timeline-status active-status"><i class="fa-solid fa-spinner fa-spin"></i> In Progress</span>
+                            </div>
+                            <h3>Bachelor of Technology (B.Tech) - Mechanical Engineering</h3>
+                            <p class="institution"><i class="fa-solid fa-building-columns"></i> Engineering University Program</p>
+                            <p class="timeline-desc">
+                                Immersing in foundational core subjects: Engineering Mechanics, Basic Thermodynamics, Physics of Materials, Engineering Graphics & CAD, Workshop Practice, and Manufacturing Processes. Actively seeking automotive and technical student clubs.
+                            </p>
+                            <div class="timeline-tags">
+                                <span>Kinematics</span>
+                                <span>Applied Physics</span>
+                                <span>Workshop Labs</span>
+                                <span>Engineering Graphics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot completed"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="badge-year">Class 12th Senior Secondary</span>
+                                <span class="timeline-status completed-status"><i class="fa-solid fa-circle-check"></i> Successfully Completed</span>
+                            </div>
+                            <h3>Senior Secondary Education (Class XII - PCM)</h3>
+                            <p class="institution"><i class="fa-solid fa-school"></i> Yaduvanshi Shiksha Niketan, Narnaul, Haryana</p>
+                            <p class="timeline-desc">
+                                Completed high school education with strong emphasis on Physics, Chemistry, and Mathematics (PCM). Built analytical problem-solving skills, laboratory experimentation rigor, and developed a keen curiosity for mechanical science and automotive technology.
+                            </p>
+                            <div class="timeline-tags">
+                                <span>Physics</span>
+                                <span>Chemistry</span>
+                                <span>Mathematics</span>
+                                <span>Narnaul, Haryana</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workshop Log / Terminal Interactive Feature -->
+        <section class="section terminal-section">
+            <div class="container">
+                <div class="terminal-window">
+                    <div class="terminal-bar">
+                        <div class="terminal-dots">
+                            <span class="t-dot t-red"></span>
+                            <span class="t-dot t-yellow"></span>
+                            <span class="t-dot t-green"></span>
+                        </div>
+                        <div class="terminal-title">mayank@engineering-lab:~/tinkering-log</div>
+                        <div class="terminal-action">BASH / LIVE_CONSOLE</div>
+                    </div>
+                    <div class="terminal-body" id="terminalBody">
+                        <p class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></p>
+                        <p class="t-output">Mayank Yadav — 1st Year Mechanical Engineer | Automotive Enthusiast | Narnaul, Haryana</p>
+                        <p class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat interests.json</span></p>
+                        <p class="t-output">{ "automotive": ["Car Repair", "Engine Tuning", "Fabrication", "Suspension Geometry"], "precision": ["Firearms Mechanism", "Gas Pistons", "Ballistics", "Tolerances"] }</p>
+                        <p class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">status --mindset</span></p>
+                        <p class="t-output highlight-green"><i class="fa-solid fa-check"></i> Status: Always ready to explore new engineering frontiers, learn advanced software, and build tangible machines.</p>
+                        <p class="t-line"><span class="t-prompt">$</span> <span class="t-cursor">_</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-tag"><i class="fa-solid fa-envelope"></i> GET IN TOUCH</div>
+                <h2 class="section-title">Let's Connect & <span class="gradient-text">Talk Engineering</span></h2>
+                <p class="section-subtitle">
+                    Whether you are an automotive enthusiast, fellow engineer, workshop mentor, or want to discuss mechanical projects, my inbox is always open.
+                </p>
+
+                <div class="contact-grid">
+                    <div class="contact-info-card">
+                        <h3>Connect with Mayank</h3>
+                        <p>Feel free to reach out for project collaborations, technical discussions, or internship opportunities in mechanical engineering and automotive design.</p>
+
+                        <div class="contact-methods">
+                            <div class="method-item">
+                                <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <span class="method-title">Location</span>
+                                    <span class="method-detail">Narnaul, Haryana, India</span>
+                                </div>
+                            </div>
+
+                            <div class="method-item">
+                                <div class="method-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div>
+                                    <span class="method-title">Academics</span>
+                                    <span class="method-detail">B.Tech Mechanical Engineering (1st Year)</span>
+                                </div>
+                            </div>
+
+                            <div class="method-item">
+                                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <span class="method-title">Email</span>
+                                    <a href="mailto:mayank.mech.engg@example.com" class="method-detail link">mayank.mech.engg@example.com</a>
+                                </div>
+                            </div>
+
+                            <div class="method-item">
+                                <div class="method-icon"><i class="fa-solid fa-wrench"></i></div>
+                                <div>
+                                    <span class="method-title">Interests</span>
+                                    <span class="method-detail">Cars, Engines, Firearms Kinematics & CAD</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-btn" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="social-btn" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="social-btn" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="social-btn" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-card">
+                        <h3>Send a Message</h3>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <div class="input-wrap">
+                                    <i class="fa-solid fa-user form-icon"></i>
+                                    <input type="text" id="name" name="name" required placeholder="e.g. Rahul Sharma">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <div class="input-wrap">
+                                    <i class="fa-solid fa-at form-icon"></i>
+                                    <input type="email" id="email" name="email" required placeholder="e.g. rahul@example.com">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject / Project Discussion</label>
+                                <div class="input-wrap">
+                                    <i class="fa-solid fa-heading form-icon"></i>
+                                    <input type="text" id="subject" name="subject" required placeholder="e.g. Engine Project / Workshop Collaboration">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <div class="input-wrap">
+                                    <textarea id="message" name="message" rows="4" required placeholder="Share your message, idea, or challenge..."></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span><i class="fa-solid fa-paper-plane"></i> Transmit Message</span>
+                            </button>
+                            <div id="formSuccessMessage" class="form-feedback hidden">
+                                <i class="fa-solid fa-circle-check"></i> Thank you! Message registered successfully.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Details Modal -->
+    <div class="modal" id="projectModal" aria-hidden="true">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            <div id="modalBody">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="logo-icon"><i class="fa-solid fa-gear"></i></span>
+                <span class="brand-name">Mayank Yadav</span>
+                <p>First-Year Mechanical Engineer • Automotive & Precision Tinkerer • Yaduvanshi Shiksha Niketan Alum</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Mayank Yadav. Designed with precision & mechanical passion.</p>
+                <div class="footer-location">
+                    <span><i class="fa-solid fa-location-crosshairs"></i> Narnaul, Haryana, India</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
